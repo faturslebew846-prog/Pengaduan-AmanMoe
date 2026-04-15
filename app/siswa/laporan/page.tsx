@@ -204,13 +204,13 @@ export default function ReportForm() {
       let imageUrl = '';
       if (form.image) imageUrl = await uploadImage(form.image);
       await createReport({
-        userId:   user.uid,
-        kategori: form.kategori as any,
-        judul:    form.judul,
-        deskripsi: form.deskripsi,
-        lokasi:   form.lokasi,
+        userId: user.uid,
+        kategori: form.kategori,
+        judul: form.judul,
+        isi: form.deskripsi, // mapping
+        lokasi: form.lokasi,
         foto: imageUrl || undefined,
-        status:   'menunggu',
+        status: 'menunggu',
         prioritas: 'normal',
       });
       setDone(true);
