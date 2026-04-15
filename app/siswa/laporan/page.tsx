@@ -209,7 +209,7 @@ export default function ReportForm() {
         judul:    form.judul,
         deskripsi: form.deskripsi,
         lokasi:   form.lokasi,
-        foto:     imageUrl || null,
+        foto: imageUrl || undefined,
         status:   'menunggu',
         prioritas: 'normal',
       });
