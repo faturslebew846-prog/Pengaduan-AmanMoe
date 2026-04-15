@@ -202,7 +202,7 @@ export default function ReportForm() {
     try {
       setSending(true);
       let imageUrl = '';
-      if (form.image) imageUrl = await uploadImage(form.image, user.uid);
+      if (form.image) imageUrl = await uploadImage(form.image);
       await createReport({
         userId:   user.uid,
         kategori: form.kategori,
