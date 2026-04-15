@@ -205,7 +205,7 @@ export default function ReportForm() {
       if (form.image) imageUrl = await uploadImage(form.image);
       await createReport({
         userId:   user.uid,
-        kategori: form.kategori,
+        kategori: form.kategori as any,
         judul:    form.judul,
         deskripsi: form.deskripsi,
         lokasi:   form.lokasi,
