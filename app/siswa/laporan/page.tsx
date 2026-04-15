@@ -211,7 +211,6 @@ export default function ReportForm() {
         lokasi: form.lokasi,
         foto: imageUrl || undefined,
         status: 'menunggu',
-        prioritas: 'normal',
       });
       setDone(true);
     } catch (e) {
