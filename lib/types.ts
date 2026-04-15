@@ -76,7 +76,8 @@ export interface ReportResponse {
   pengaduanId: string;
   petugasId: string;
   tanggapan: string;
-  createdAt: Date;
+  createdAt: any;
+  foto?: string;
 }
 
 
