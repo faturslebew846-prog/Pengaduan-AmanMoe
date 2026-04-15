@@ -34,8 +34,8 @@ export default function AllReportsPage() {
     getAllReports()
       .then(data => setReports(
         data.sort((a, b) => {
-          const ta = a.createdAt?.toDate?.() ?? new Date(a.createdAt);
-          const tb = b.createdAt?.toDate?.() ?? new Date(b.createdAt);
+                const ta = new Date(a.createdAt);
+                const tb = new Date(b.createdAt);
           return tb.getTime() - ta.getTime();
         })
       ))
